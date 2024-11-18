@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "ma-compagnie",
+    "slug": "ma-compagnie",
+    "plugins": [
+      "@react-native-google-signin/google-signin"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aminou-zakara.macompagnie"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "googleServicesFile": "./google-services.json",
+      "package": "com.aminou_zakara.macompagnie"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fcecafee-2c80-464a-b0af-d1a6da03ebf4"
+      }
+    }
+  }
+}
