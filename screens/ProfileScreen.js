@@ -4,6 +4,7 @@ import { useFocusEffect, useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import { EvilIcons } from '@expo/vector-icons';
 import { doc, getDoc, onSnapshot } from "firebase/firestore";
 import { auth, db } from '../firebase';
 import { firebase } from '@react-native-firebase/auth';
@@ -56,7 +57,7 @@ const ProfileScreen = () => {
 
             headerShown: true,
             title: <View>
-                <Text style={styles.headerTitle}>My Account</Text>
+                <Text style={styles.headerTitle}> Mon Compte </Text>
             </View>,
             headerTitleStyle: {
                 fontSize: 20,
@@ -73,7 +74,8 @@ const ProfileScreen = () => {
                 <Pressable
                     onPress={() => navigation.navigate("MyProfile")}
                 >
-                    <Ionicons name="person" size={24} color="white" style={{ marginRight: 12 }} />
+                    <EvilIcons name="user" size={100} color="white" />
+
 
                 </Pressable>
             )
@@ -125,7 +127,7 @@ const ProfileScreen = () => {
                                     <View style={{ flexDirection: "row", justifyContent: "space-between" }} >
                                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                                             <Ionicons name="person" size={24} color="lightgray" />
-                                            <Text style={{ marginLeft: 8, letterSpacing: 0.5 }} >My Profile</Text>
+                                            <Text style={{ marginLeft: 8, letterSpacing: 0.5 }} >Modifier Mon Profil</Text>
                                         </View>
 
                                         <MaterialIcons name="navigate-next" size={24} color="gray" />
@@ -142,7 +144,7 @@ const ProfileScreen = () => {
                             <View style={{ flexDirection: "row", justifyContent: "space-between" }} >
                                 <View style={{ flexDirection: "row", alignItems: "center" }} >
                                     <AntDesign name="logout" size={24} color="lightgray" />
-                                    <Text style={{ marginLeft: 8, letterSpacing: 0.5 }} >Logout</Text>
+                                    <Text style={{ marginLeft: 8, letterSpacing: 0.5 }} >Déconnecter</Text>
                                 </View>
 
                                 <MaterialIcons name="navigate-next" size={24} color="gray" />

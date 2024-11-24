@@ -1,15 +1,48 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { FontAwesome6 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 import { FontAwesome } from '@expo/vector-icons';
 
 const Header = () => {
     return (
-        <View style={{ backgroundColor: "green", height: 65, flexDirection: "row", alignItems: "center", justifyContent: "space-around" }}>
+        <View style={{ backgroundColor: "green", height: 140, flexDirection: "row", alignItems: "center", justifyContent: "space-around" }}>
 
-            <Pressable style={{
+            <AntDesign name="doubleleft" size={28} color="white" />
+            <Text style={{ color: "white" }}>-</Text>
+
+            <AntDesign name="doubleleft" size={28} color="orange" />
+            <Text style={{ color: "white" }}>-</Text>
+
+            <AntDesign name="doubleleft" size={28} color="white" />
+            <Text style={{ color: "white" }}>-</Text>
+
+            {/* show the background logo image */}
+            <Image source={require('../assets/fLogo.jpg')} style={{
+                width: "23%", height: 50,
+                resizeMode: "contain",
+                borderWidth: 2,
+                borderColor: "white",
+                borderTopLeftRadius: 20,
+                borderBottomLeftRadius: 3,
+                borderBottomRightRadius: 2,
+                borderTopRightRadius: 3,
+
+            }}
+            />
+            <Text style={{ color: "white" }}>-</Text>
+
+            <AntDesign name="doubleright" size={28} color="white" />
+            <Text style={{ color: "white" }}>-</Text>
+
+            <AntDesign name="doubleright" size={28} color="orange" />
+            <Text style={{ color: "white" }}>-</Text>
+
+            <AntDesign name="doubleright" size={28} color="white" />
+
+            {/* <Pressable style={{
                 flexDirection: "row",
                 alignItems: "center",
                 borderColor: "white",
@@ -24,9 +57,9 @@ const Header = () => {
                     color: "white",
                     fontSize: 15
                 }} >Bus</Text>
-            </Pressable>
+            </Pressable> */}
 
-            <Pressable style={{
+            {/* <Pressable style={{
                 flexDirection: "row",
                 alignItems: "center",
 
@@ -66,7 +99,7 @@ const Header = () => {
                     color: "white",
                     fontSize: 15
                 }} >Service</Text>
-            </Pressable>
+            </Pressable> */}
 
 
         </View>

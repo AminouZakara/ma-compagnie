@@ -15,7 +15,7 @@ const BookingScreen = () => {
         navigation.setOptions({
 
             headerShown: true,
-            title: "My Bookings",
+            title: "Mes Réservations",
             headerTitleStyle: {
                 fontSize: 20,
                 fontWeight: "bold",

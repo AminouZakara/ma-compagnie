@@ -23,7 +23,7 @@ const MyProfileScreen = () => {
         navigation.setOptions({
 
             headerShown: true,
-            title: "My Profile",
+            title: "Modifier Mon Profil",
             headerTitleStyle: {
                 fontSize: 20,
                 fontWeight: "bold",

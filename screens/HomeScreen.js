@@ -42,17 +42,18 @@ const HomeScreen = () => {
     useLayoutEffect(() => {
         navigation.setOptions({
 
-            headerShown: true,
-            title: "monbillet.afrique.com",
+            headerShown: false,
+            title: "Mon Billet",
             headerTitleStyle: {
                 fontSize: 20,
                 fontWeight: "bold",
                 color: "white",
 
+
             },
             headerStyle: {
                 backgroundColor: "green",
-                height: 110,
+                height: 90,
                 borderBottomColor: "transparent",
                 shadowColor: "transparent"
             },

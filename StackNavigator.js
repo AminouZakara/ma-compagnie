@@ -57,7 +57,7 @@ const StackNavigator = () => {
                     component={HomeScreen}
 
                     options={{
-                        tabBarLabel: "Home", headerShown: false, tabBarIcon: ({ focused }) => focused ? (
+                        tabBarLabel: "Accueil", headerShown: false, tabBarIcon: ({ focused }) => focused ? (
                             <Entypo name="home" size={24} color="green" />
                         ) : (
                             <AntDesign name="home" size={24} color="black" />
@@ -79,7 +79,7 @@ const StackNavigator = () => {
                     name='Bookings'
                     component={BookingScreen}
                     options={{
-                        tabBarLabel: "Bookings", headerShown: false, tabBarIcon: ({ focused }) => focused ? (
+                        tabBarLabel: "Réservations", headerShown: false, tabBarIcon: ({ focused }) => focused ? (
                             <Ionicons name="notifications" size={24} color="green" />
                         ) : (
                             <Ionicons name="notifications-outline" size={24} color="black" />
@@ -90,7 +90,7 @@ const StackNavigator = () => {
                     name='Profile'
                     component={ProfileScreen}
                     options={{
-                        tabBarLabel: "Profile ", headerShown: false, tabBarIcon: ({ focused }) => focused ? (
+                        tabBarLabel: "Profil", headerShown: false, tabBarIcon: ({ focused }) => focused ? (
                             <Ionicons name="person" size={24} color="green" />
                         ) : (
                             <Ionicons name="person-outline" size={24} color="black" />
