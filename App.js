@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import BgLoaderScreen from './screens/BgLoaderScreen';
 import StackNavigator from './StackNavigator';
 import store from './store';
-import { PUBLISHABLE_KEY } from "./.env"
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -35,7 +34,7 @@ export default function App() {
         console.log("keyboard dismissed")
       }} >
         <Provider store={store}>
-          <StripeProvider publishableKey="PUBLISHABLE_KEY" >
+          <StripeProvider publishableKey="pk_test_51PGPFY03DRU38FLcs3PWpl6hCxtVAZghufhLsFGXRw0aS0aYOLOHboPpuAOoYBd649f78lFosHOVKNPHXaFUpSKn00sXPgfzMe" >
             <StackNavigator style={styles.container} />
             <ModalPortal />
           </StripeProvider>
