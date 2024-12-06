@@ -33,7 +33,7 @@ const CreateScreen = () => {
         navigation.setOptions({
 
             headerShown: true,
-            title: "Create a New Ticket",
+            title: "Nouveau Bus",
             headerTitleStyle: {
                 fontSize: 20,
                 fontWeight: "bold",

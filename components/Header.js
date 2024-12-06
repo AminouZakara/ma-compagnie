@@ -8,39 +8,25 @@ import { FontAwesome } from '@expo/vector-icons';
 
 const Header = () => {
     return (
-        <View style={{ backgroundColor: "green", height: 140, flexDirection: "row", alignItems: "center", justifyContent: "space-around" }}>
+        <View style={{ backgroundColor: "green", height: 140, flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal:10}}>
+ <Text style={{
+                    marginLeft: 8,
+                    fontWeight: "bold",
+                    color: "white",
+                    fontSize: 30
+                }} >Mon Billet Afrique</Text>
 
-            <AntDesign name="doubleleft" size={28} color="white" />
-            <Text style={{ color: "white" }}>-</Text>
-
-            <AntDesign name="doubleleft" size={28} color="orange" />
-            <Text style={{ color: "white" }}>-</Text>
-
-            <AntDesign name="doubleleft" size={28} color="white" />
-            <Text style={{ color: "white" }}>-</Text>
-
-            {/* show the background logo image */}
-            <Image source={require('../assets/fLogo.jpg')} style={{
-                width: "23%", height: 50,
-                resizeMode: "contain",
-                borderWidth: 2,
+<Pressable style={{
+                flexDirection: "row",
+                alignItems: "center",
                 borderColor: "white",
-                borderTopLeftRadius: 20,
-                borderBottomLeftRadius: 3,
-                borderBottomRightRadius: 2,
-                borderTopRightRadius: 3,
-
-            }}
-            />
-            <Text style={{ color: "white" }}>-</Text>
-
-            <AntDesign name="doubleright" size={28} color="white" />
-            <Text style={{ color: "white" }}>-</Text>
-
-            <AntDesign name="doubleright" size={28} color="orange" />
-            <Text style={{ color: "white" }}>-</Text>
-
-            <AntDesign name="doubleright" size={28} color="white" />
+                borderWidth: 1,
+                borderRadius: 50,
+                padding: 8
+            }}>
+                <FontAwesome6 name="bus-simple" size={24} color="white" />
+               
+            </Pressable>
 
             {/* <Pressable style={{
                 flexDirection: "row",

@@ -12,7 +12,7 @@ const RemoveOrUpdateStation = () => {
         navigation.setOptions({
 
             headerShown: true,
-            title: "Remove or Update Station",
+            title: "Enlever ou Modifier la Gare",
             headerTitleStyle: {
                 fontSize: 20,
                 fontWeight: "bold",
@@ -116,7 +116,7 @@ const RemoveOrUpdateStation = () => {
             <View style={{ marginTop: 5 }}>
                 <View>
                     <Text style={{ fontSize: 18, fontWeight: "600", color: "gray" }}>
-                        Station
+                        Gare
                     </Text>
 
                     <TextInput
@@ -157,7 +157,7 @@ const RemoveOrUpdateStation = () => {
                         fontWeight: "bold",
                     }}
                 >
-                    Update Station
+                   Modifier
                 </Text>
             </Pressable>
 
@@ -181,7 +181,7 @@ const RemoveOrUpdateStation = () => {
                         fontWeight: "bold",
                     }}
                 >
-                    Delete Station
+                    Enlever
                 </Text>
             </Pressable>
 

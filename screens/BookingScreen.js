@@ -74,8 +74,8 @@ const BookingScreen = () => {
             <View style={styles.container}>
                 {isLoading ? (
                     <View style={{ flex: 1, alignItems: "center", marginTop: 100 }} >
-                        <Text style={{ padding: 15, backgroundColor: "orange", fontSize: 20, color: "white" }} >Fetching All Your Bookings</Text>
-                        <Text style={{ color: "green", fontSize: 22, marginTop: 50 }} > Please wait </Text>
+                        <Text style={{ padding: 15, backgroundColor: "orange", fontSize: 20, color: "white" }} >Récupérer toutes vos réservations</Text>
+                        <Text style={{ color: "green", fontSize: 22, marginTop: 50 }} > S'il vous plaît, attendez </Text>
                     </View>
                 ) : (
                     <View>

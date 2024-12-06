@@ -1,10 +1,11 @@
 import { Alert, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { FontAwesome6 } from '@expo/vector-icons';
 import { async } from '@firebase/util';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc } from 'firebase/firestore';
 import { db } from '../../../firebase';
+import { firebase } from '@react-native-firebase/auth';
 
 const AddStation = () => {
     const navigation = useNavigation();
@@ -13,7 +14,7 @@ const AddStation = () => {
         navigation.setOptions({
 
             headerShown: true,
-            title: "Manage Bus Stations",
+            title: "Gestion des Gares Routiéres",
             headerTitleStyle: {
                 fontSize: 20,
                 fontWeight: "bold",
@@ -27,17 +28,39 @@ const AddStation = () => {
             },
             headerRight: () => (
                 <View style={{ flexDirection: "row", alignItems: "center" }} >
-                    { }
-                    <Pressable
-                        onPress={() => { navigation.navigate("Author") }}
-
-                        style={{ flexDirection: "row", alignItems: "center", marginRight: 15, }}>
-                        <Text style={{ fontSize: 16, fontWeight: "500", color: "white" }} > Author Pg </Text>
+                     <Pressable>
+                            <FontAwesome6 name="user" size={20} color="white" />
                     </Pressable>
                 </View>
             )
         })
     }, [])
+
+
+     //get User
+     const [userData, setUserData] = useState('');
+     const userId = firebase.auth().currentUser.uid;
+ 
+     const getUser = async () => {
+         const docRef = doc(db, "users", userId);
+         const docSnap = await getDoc(docRef);
+         if (docSnap.exists()) {
+             setUserData(docSnap.data());
+ 
+         } else {
+             // doc.data() will be undefined in this case
+             console.log("No such document!");
+         }
+ 
+     }
+     console.log(" This User is:", userData?.role)
+
+     useEffect(() => {
+        getUser()
+
+    }, []);
+
+    console.log("user data : ", userData)
 
     const [busStation, setBusStation] = useState('')
 

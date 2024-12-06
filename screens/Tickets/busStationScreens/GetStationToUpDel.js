@@ -12,7 +12,7 @@ const GetStationToUpDel = () => {
         navigation.setOptions({
 
             headerShown: true,
-            title: "Get The Station To Up or Del",
+            title: "Enlever ou Modifier la Gare",
             headerTitleStyle: {
                 fontSize: 20,
                 fontWeight: "bold",
@@ -107,7 +107,7 @@ const GetStationToUpDel = () => {
                     <View style={{ padding: 8, backgroundColor: "white" }}>
                         <View>
                             <View style={{ marginHorizontal: 5 }}>
-                                <Text>Choisir l'istation</Text>
+                                <Text>Choisir la Gare</Text>
                             </View>
 
                             <SafeAreaView style={{
@@ -165,8 +165,6 @@ const GetStationToUpDel = () => {
                                     }}
 
                                 />
-
-
 
                             </SafeAreaView>
 

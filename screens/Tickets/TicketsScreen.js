@@ -21,7 +21,7 @@ const TicketsScreen = () => {
         navigation.setOptions({
 
             headerShown: true,
-            title: "All Buses",
+            title: "Tous les Bus",
             headerTitleStyle: {
                 fontSize: 20,
                 fontWeight: "bold",
@@ -124,8 +124,8 @@ const TicketsScreen = () => {
                 isLoading ? (
 
                     <View style={{ flex: 1, alignItems: "center", marginTop: 100 }} >
-                        <Text style={{ padding: 15, backgroundColor: "orange", fontSize: 20, color: "white" }} >Fetching All the Buses</Text>
-                        <Text style={{ color: "green", fontSize: 22, marginTop: 50 }} > Please wait...</Text>
+                        <Text style={{ padding: 15, backgroundColor: "orange", fontSize: 20, color: "white" }} >Récupérer Tous les Bus</Text>
+                        <Text style={{ color: "green", fontSize: 22, marginTop: 50 }} > S'il vous plaît, attendez ...</Text>
                     </View>
                 ) : (
                     <ScrollView>

@@ -10,12 +10,14 @@ import store from './store';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
 
     }, 3000)
     firebase.auth().onAuthStateChanged(user => {
+      
 
     });
 

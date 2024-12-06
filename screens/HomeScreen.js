@@ -59,8 +59,6 @@ const HomeScreen = () => {
             },
             headerRight: () => (
                 <View style={{ flexDirection: "row", alignItems: "center" }}>
-
-
                     <Ionicons name="notifications-outline" size={24} color="white" style={{ marginRight: 12 }} />
                 </View>
 
