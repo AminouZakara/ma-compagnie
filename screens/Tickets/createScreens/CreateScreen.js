@@ -111,7 +111,7 @@ const CreateScreen = () => {
         const companyName = userData.companyName;
         const busItems = {
             depPlace, destPlace, travelDate, companyName, travelHour, travelMinute, price, seatType, durationHour, durationMinute, By: user.email, TicketUserID: userID, userID: userID,
-            row1, row2, row3
+            row1, row2, row3, createdAt: Date.now()
             // createdBy: userID,
             // assignedTo: '',
             // dateCreated: firebase.firestore.FieldValue.serverTimestamp(),

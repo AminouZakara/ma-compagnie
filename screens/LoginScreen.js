@@ -19,7 +19,7 @@ const LoginScreen = () => {
     const navigation = useNavigation();
 
     GoogleSignin.configure({
-        webClientId: "954218532580-igmq7nn8kntfgl86q3vnv4hvoh8hhvjl.apps.googleusercontent.com"
+        webClientId: process.env.WEB_CLIENT_ID
     });
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

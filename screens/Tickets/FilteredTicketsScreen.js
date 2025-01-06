@@ -8,7 +8,7 @@ import { Entypo } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
 import { BottomModal, ModalContent, ModalFooter, ModalTitle, SlideAnimation } from 'react-native-modals';
-import { collection, getDocs, onSnapshot } from 'firebase/firestore';
+import { collection, getDocs, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '../../firebase';
 import FilTicketCard from '../../components/FilTicketCard';
 
@@ -74,7 +74,7 @@ const FilteredTicketsScreen = () => {
 
         setIsLoading(true);
 
-        const colRef = collection(db, "buses");
+        const colRef = query(collection(db, "buses"), orderBy("travelHour", "asc"));
         const unsub = onSnapshot(colRef, (snapshot) => {
             let results = []
             snapshot.forEach((doc) => {
@@ -197,7 +197,7 @@ const FilteredTicketsScreen = () => {
 
                 {isLoading ? (
                     <View style={{ flex: 1, alignItems: "center", marginTop: 100 }} >
-                        <Text style={{ padding: 15, backgroundColor: "orange", fontSize: 20, color: "white" }} >Récupérer Tous les Bus</Text>
+                        <Text style={{borderRadius:10, padding: 15, backgroundColor: "orange", fontSize: 20, color: "white" }} >Récupérer Tous les Bus</Text>
                         <Text style={{ color: "green", fontSize: 22, marginTop: 50 }} > S'il vous plaît, attendez ... </Text>
                     </View>
                 ) : (

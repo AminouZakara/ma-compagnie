@@ -53,14 +53,14 @@ const BookingScreen = () => {
         return () => unsub();
     }, []);
     const [datte, setDatte] = useState([])
-    console.log("These are The Bookings Dependencies", allBookings);
+    //console.log("These are The Bookings Dependencies", allBookings);
 
     allBookings.filter((Bookings) => Bookings.userID === currentUserID).map((item, indexi) => {
-        console.log("These are The Bookings Dependencies", item.travelDate);
+        //console.log("These are The Bookings Dependencies", item.travelDate);
         datte.push(item.travelDate)
     })
-    console.log("Current Date..", new Date().toLocaleDateString())
-    console.log("V Date..", datte)
+    //console.log("Current Date..", new Date().toLocaleDateString())
+   // console.log("V Date..", datte)
     // compare firebaseTicket to TodayDate
 
 
@@ -73,7 +73,7 @@ const BookingScreen = () => {
         <ScrollView>
             <View style={styles.container}>
                 {isLoading ? (
-                    <View style={{ flex: 1, alignItems: "center", marginTop: 100 }} >
+                    <View style={{ flex: 1, alignItems: "center", marginTop: 100}} >
                         <Text style={{ padding: 15, backgroundColor: "orange", fontSize: 20, color: "white" }} >Récupérer toutes vos réservations</Text>
                         <Text style={{ color: "green", fontSize: 22, marginTop: 50 }} > S'il vous plaît, attendez </Text>
                     </View>

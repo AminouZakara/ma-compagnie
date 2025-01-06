@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-import { collection, deleteDoc, doc, getDoc, getDocs, onSnapshot } from 'firebase/firestore';
+import { collection, deleteDoc, doc, getDoc, getDocs, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { auth, db } from '../../firebase';
 import TicketCard from '../../components/TicketCard';
 import { firebase } from '@react-native-firebase/auth';
@@ -71,7 +71,7 @@ const TicketsScreen = () => {
     // Fetch Buses -----------------------
     useEffect(() => {
         setIsLoading(true)
-        const ref = collection(db, "buses");
+        const ref = query( collection(db, "buses"), orderBy("createdAt", "desc"));
 
         const unsub = onSnapshot(ref, (snapshot) => {
             let results = []
@@ -105,7 +105,7 @@ const TicketsScreen = () => {
             { cancelable: true }
         );
     };
-    console.log("UserData:", userData);
+    //console.log("UserData:", userData);
     // {
     //     buses.length > 0 ? (
     //   ) : (
@@ -128,7 +128,9 @@ const TicketsScreen = () => {
                         <Text style={{ color: "green", fontSize: 22, marginTop: 50 }} > S'il vous plaît, attendez ...</Text>
                     </View>
                 ) : (
-                    <ScrollView>
+                    <ScrollView
+                    showsVerticalScrollIndicator={false}
+                    >
                         <View>
                             {
                                 buses.map((bus, index) => (
@@ -234,6 +236,7 @@ const TicketsScreen = () => {
                                                             <View style={{ flexDirection: "row", width: "100%" }}>
                                                                 <View style={{ flexDirection: "row", paddingLeft: 5, justifyContent: "space-between", marginTop: 8 }}>
                                                                     <Text style={{ fontSize: 12, fontWeight: "500", color: "orange" }} >  {bus.depPlace} <Text style={{ color: "grey" }}>Otogare</Text> {'--->'} {bus.destPlace} <Text style={{ color: "grey" }}>Otogare</Text> </Text>
+                                                                    <Text> {bus.travelDate} </Text>
                                                                 </View>
                                                             </View>
 
