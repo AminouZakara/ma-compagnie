@@ -39,6 +39,7 @@ build/
 # local env files
 .env*.local
 *.env
+.env
 firebase.js
 
 #Editor Files

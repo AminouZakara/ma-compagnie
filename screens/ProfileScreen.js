@@ -1,4 +1,4 @@
-import { ActivityIndicator, Alert, Pressable, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, Alert, Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useCallback, useEffect, useLayoutEffect, useState } from 'react'
 import { useFocusEffect, useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons';
@@ -48,8 +48,6 @@ const ProfileScreen = () => {
             { cancelable: false }
         );
         return true;
-
-
     };
 
     useLayoutEffect(() => {
@@ -74,7 +72,19 @@ const ProfileScreen = () => {
                 <Pressable
                     onPress={() => navigation.navigate("MyProfile")}
                 >
-                    <EvilIcons name="user" size={100} color="white" />
+                    {
+                        () => (
+                            <Image
+                            source={{uri: user.photoURL}}
+                            style={{
+                                width: 60,
+                                height: 60,
+                                borderRadius: 30,
+                                marginRight: 20
+                            }}
+                            />
+                            )
+                    }
 
 
                 </Pressable>
@@ -99,6 +109,7 @@ const ProfileScreen = () => {
     // console.log("user data : ", userData)
     console.log("User Data...", userData)
     console.log("User Name...", userData.name)
+    console.log("Google User Name...", user.displayName)
 
     //--------
 

@@ -97,14 +97,18 @@ const LoginScreen = () => {
             } catch (error) {
                 Alert.alert(
                     "Incorrect",
-                    error.message,
+                    "SVP verifier votre email et votre mot de passe",
                     [
-                        { text: "OK", onPress: () => console.log("OK Pressed") }
+                        { text: "OK", onPress: () => {
+                            console.log("OK Pressed")
+                        } }
                     ],
                     { cancelable: false }
                 );
                 setError(error.message);
                 setLoading(false);
+                console.log("This is the err", error);
+                
             }
         }
 

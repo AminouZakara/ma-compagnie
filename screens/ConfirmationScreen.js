@@ -78,6 +78,7 @@ const ConfirmationScreen = () => {
             email: userData.email,
             userID: userID,
             selectedSeats: bookedTicket.selectedSeats,
+            createdAt: Date.now()
         }
         // console.log(confirmedTicket)
         // Add a New Ticket
